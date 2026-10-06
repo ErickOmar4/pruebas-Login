@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar sesión</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/login.css" rel="stylesheet">
+</head>
+<body>
+  <main class="login-pagina">
+    <section class="login-lado">
+      <img src="img/logo.svg" alt="Logo del sistema" width="48" height="48">
+      <div>
+        <h1>Control de usuarios y alumnos</h1>
+        <p>Captura usuarios, registra alumnos y consulta su mayoría de edad en un solo lugar.</p>
+      </div>
+      <small>Proyecto escolar · HTML, CSS y JavaScript</small>
+    </section>
+
+    <section class="login-form">
+      <form id="formLogin" novalidate>
+        <h2 class="h3 fw-bold mb-1">Iniciar sesión</h2>
+        <p class="text-secondary mb-4">Ingresa tu correo y contraseña.</p>
+
+        <div id="alertaLogin" class="alert alert-danger d-none" role="alert"></div>
+
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="correo" autocomplete="username" placeholder="nombre@correo.com">
+          <div class="invalid-feedback" id="errorCorreo"></div>
+        </div>
+
+        <div class="mb-4">
+          <label for="password" class="form-label">Contraseña</label>
+          <div class="input-group has-validation">
+            <input type="password" class="form-control" id="password" autocomplete="current-password" placeholder="Mínimo 8 caracteres">
+            <button class="btn btn-outline-secondary" type="button" id="verPassword" aria-label="Mostrar contraseña"><i class="bi bi-eye"></i></button>
+            <div class="invalid-feedback" id="errorPassword"></div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-marca w-100 py-2">Entrar</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/utileria.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
